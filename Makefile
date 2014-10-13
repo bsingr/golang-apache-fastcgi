@@ -1,7 +1,9 @@
-default: build
+default:
+	make deploy
+	make run
 run:
 	fig rm --force && fig build && fig up
+deploy:
+	GOOS=linux GOARCH=amd64 make build && mv hello_world.fcgi web/public/
 build:
-	GOOS=linux GOARCH=amd64 go build app.go && mv app web/public/app.fcgi
-local:
-	go build app.go
+	go build hello_world.go && mv hello_world hello_world.fcgi
