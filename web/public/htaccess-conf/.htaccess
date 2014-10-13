@@ -1,0 +1,5 @@
+<IfModule mod_fcgid.c>
+AddHandler fcgid-script .fcgi
+</IfModule>
+
+Options +ExecCGI
