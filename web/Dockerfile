@@ -15,5 +15,7 @@ RUN rm -rf /var/www
 ADD ./public /var/www
 
 EXPOSE 80
+EXPOSE 81
+EXPOSE 82
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

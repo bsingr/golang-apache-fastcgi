@@ -1,0 +1,10 @@
+<IfModule mod_fcgid.c>
+AddHandler fcgid-script .fcgi
+</IfModule>
+
+Options +ExecCGI
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d [OR]
+RewriteRule ^(.*)$ beego.fcgi [QSA,L]

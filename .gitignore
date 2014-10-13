@@ -1,6 +1,6 @@
 web/logs/*
 **/*.fcgi
-web/public/**/vanilla
-web/public/**/beego
+web/public/vanilla
+web/public/beego
 examples/vanilla/hello_world
 examples/beego/beego

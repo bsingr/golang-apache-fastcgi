@@ -2,19 +2,24 @@
 <html>
 <head>
   <title>Go lang + Apache + FastCGI via standard I/O</title>
+  <script type="text/javascript">
+  function switchPort(port) {
+    window.location = location
+      .protocol
+      .concat("//")
+      .concat(window.location.hostname)
+      .concat(":")
+      .concat(port);
+  }
+  </script>
 </head>
 <body>
   <h1>Go lang + Apache + FastCGI via standard I/O</h1>
-  <h2>Global config</h2>
+  <h2>Apps</h2>
   <ul>
-    <li><a href="/global-conf/vanilla/hello_world.fcgi">Vanilla</a></li>
-    <li><a href="/global-conf/beego/beego.fcgi">Beego</a></li>
+    <li><a href="#" onClick="switchPort('81')">Vanilla</a></li>
+    <li><a href="#" onClick="switchPort('82')">Beego</a></li>
   </ul>
-  <h2>.htaccess config</h2>
-  <ul>
-    <li><a href="/htaccess-conf/vanilla/hello_world.fcgi">Vanilla</a></li>
-    <li><a href="/htaccess-conf/beego/beego.fcgi">Beego</a></li>
-  </ul>
-  <p>See more <a href="https://github.com/bsingr/golang-apache-fastcgi">here</a>.</p>
+  <p>See <a href="https://github.com/bsingr/golang-apache-fastcgi">github.com/bsingr/golang-apache-fastcgi</a>.</p>
 </body>
 </html>
