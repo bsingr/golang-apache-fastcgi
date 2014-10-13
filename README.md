@@ -2,6 +2,13 @@
 
 Learning project to deploy a [Go](http://go-lang.org) binary as [FastCGI](http://www.fastcgi.com) script on an [Apache http server](http://httpd.apache.org).
 
+## Examples
+
+ * [Vanilla](./examples/vanilla)
+   * Starting point to make any go binary FastCGI compatible.
+ * [Beego](./examples/beego)
+   * Using the Beego framework right now requires this pull-request [astaxie/beego#858](https://github.com/astaxie/beego/pull/858).
+
 ## Getting Started
 
 Please make sure you have [Go](http://go-lang.org) and [Beego](http://beego.me) installed. Then just do:
