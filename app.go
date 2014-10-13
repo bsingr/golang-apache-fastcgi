@@ -1,18 +1,19 @@
 package main
 
 import (
-	"flag"
 	"io"
 	"log"
 	"net/http"
 	"net/http/fcgi"
+	"os"
 	"runtime"
 )
 
-var local = flag.String("local", "", "serve as webserver, example: 0.0.0.0:8000")
+var app_addr string
 
 func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
+	app_addr = os.Getenv("APP_ADDR") // e.g. "0.0.0.0:8080" or ""
 }
 
 func ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -24,11 +25,9 @@ func ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", ServeHTTP)
 
-	flag.Parse()
 	var err error
-
-	if *local != "" { // Run as a local web server
-		err = http.ListenAndServe(*local, nil)
+	if app_addr != "" { // Run as a local web server
+		err = http.ListenAndServe(app_addr, nil)
 	} else { // Run as FCGI via standard I/O
 		err = fcgi.Serve(nil, nil)
 	}
