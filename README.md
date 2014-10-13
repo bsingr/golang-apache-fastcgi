@@ -26,6 +26,7 @@ Also on web servers like Nginx there are seperate start/stop scripts required to
 
  * [http://www.dav-muz.net/blog/2013/09/how-to-use-go-and-fastcgi/](http://www.dav-muz.net/blog/2013/09/how-to-use-go-and-fastcgi/)
  * [http://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html](http://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html)
+ * [http://golang.org/pkg/net/http/](http://golang.org/pkg/net/http/)
 
 ## License
 
