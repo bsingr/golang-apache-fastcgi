@@ -13,8 +13,6 @@ ADD ./sites-enabled /etc/apache2/sites-enabled
 
 RUN rm -rf /var/www
 ADD ./public /var/www
-RUN chown -R www-data:www-data /var/www
-RUN chmod 777 /var/www/app.fcgi
 
 EXPOSE 80
 
