@@ -1,0 +1,6 @@
+web:
+  build: web
+  ports:
+    - "80:80"
+  volumes:
+    - "web/logs:/var/log/apache2"
