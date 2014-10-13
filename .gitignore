@@ -4,3 +4,5 @@ web/public/vanilla
 web/public/beego
 examples/vanilla/hello_world
 examples/beego/beego
+Gemfile.lock
+benchmarks/*.tsv

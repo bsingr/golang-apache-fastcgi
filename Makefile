@@ -17,3 +17,10 @@ unpack:
 build:
 	cd ${EXAMPLES_VANILLA} && make pack
 	cd ${EXAMPLES_BEEGO} && make pack
+bench:
+	ab -n 5000 -c 100 -g benchmarks/static.tsv http://localdocker:80/
+	ab -n 5000 -c 100 -g benchmarks/vanilla.tsv http://localdocker:81/
+	ab -n 5000 -c 100 -g benchmarks/beego.tsv http://localdocker:82/
+	make graph
+graph:
+	gnuplot benchmarks/graph.plot
